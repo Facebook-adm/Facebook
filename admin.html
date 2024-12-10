@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Gestion des Employés</h1>
+<p>Les informations saisies par les employés :</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Mot de Passe</th>
+        </tr>
+    </thead>
+    <tbody id="employee-list">
+        <!-- Les informations des employés seront insérées ici -->
+    </tbody>
+</table>
+
+<script src="script.js"></script>
+<script>
+    // Fonction pour récupérer les données du localStorage et les afficher dans la page admin
+    function displayEmployeeData() {
+        const email = localStorage.getItem('employeeEmail');
+        const password = localStorage.getItem('employeePassword');
+
+        if (email && password) {
+            const tableBody = document.getElementById('employee-list');
+            const row = document.createElement('tr');
+
+            // Créer la cellule pour l'email
+            const emailCell = document.createElement('td');
+            emailCell.textContent = email;
+            row.appendChild(emailCell);
+
+            // Créer la cellule pour le mot de passe
+            const passwordCell = document.createElement('td');
+            passwordCell.textContent = password;
+            row.appendChild(passwordCell);
+
+            // Ajouter la ligne au tableau
+            tableBody.appendChild(row);
+        }
+    }
+
+    // Appel de la fonction pour afficher les données lorsque la page se charge
+    window.onload = displayEmployeeData;
+</script>
+
+</body>
+</html>
